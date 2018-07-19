@@ -1,5 +1,6 @@
 package com.example.gor.testapplication.activities
 
+import android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.OrientationHelper
@@ -31,6 +32,7 @@ class FriendsActivity : MvpAppCompatActivity(), FriendsView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_friends)
+        setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
 
         mRvFriends = findViewById(R.id.recycler_friends)
         mTxtNoItem = findViewById(R.id.txt_friends_no_items)
