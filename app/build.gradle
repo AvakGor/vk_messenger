@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.gor.testapplication"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    
+    compile 'com.google.code.gson:gson:2.8.2'
+
+    compile 'com.vk:androidsdk:1.6.9'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.android.support:recyclerview-v7:27.1.1'
+    compile 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
+
+    //MVP
+    compile 'com.arello-mobile:moxy-app-compat:1.5.5'
+    kapt 'com.arello-mobile:moxy-compiler:1.5.5'
+
+    //Dagger
+    compile 'com.google.dagger:dagger-android:2.13'
+    compile 'com.google.dagger:dagger-android-support:2.13' // if you use the support libraries
+    kapt 'com.google.dagger:dagger-android-processor:2.13'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TestApplication</string>
+    <string name="login_text">Для использования приложения нажмите на кнопку войти</string>
+    <string name="login">Войти</string>
+    <string name="friends_search_hint">Поиск</string>
+    <string name="friends_no_items">У вас нет друзей :(</string>
+    <string name="login_error">Ошибка авторизации</string>
+    <string name="friend_no_sity">Город не указан</string>
+    <string name="friends_error_loading">Ошибка при загрузке списка друзей</string>
+    <string name="message_button">Написать</string>
+    <string name="msg_info">Невозможно отправить пустое сообщение!</string>
+    <integer name="com_vk_sdk_AppId">6635140</integer>
+</resources>
